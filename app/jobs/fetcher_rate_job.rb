@@ -5,10 +5,7 @@ class FetcherRateJob < ApplicationJob
     loop do
       result = Currency::FetchRate.call
 
-      ActionCable.server.broadcast('update_rate', {
-                                     rate: result.rate,
-                                     date: result.date
-                                   })
+      Currency::RatePublisher.call(rate: result.rate)
 
       logger.debug "current rate=#{result.rate}"
 

@@ -1,0 +1,7 @@
+class Rate < ApplicationRecord
+  validate :force_date_time_cannot_be_in_the_past
+
+  def force_date_time_cannot_be_in_the_past
+    errors.add(:date, "can't be in the past") if force_date_time.present? && force_date_time < Time.current
+  end
+end

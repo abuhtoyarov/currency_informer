@@ -2,6 +2,6 @@
 
 class IndexController < ApplicationController
   def index
-    @result = Currency::FetchRate.call
+    @rate = current_rate
   end
 end

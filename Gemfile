@@ -45,11 +45,11 @@ group :development, :test do
   gem 'selenium-webdriver'
   gem 'simplecov', require: false
   gem 'webdrivers'
+  gem 'action-cable-testing'
 end
 
 group :development do
   gem 'webmock'
-  gem 'action-cable-testing'
   gem 'foreman'
 end
 
