@@ -46,6 +46,7 @@ end
 
 group :development do
   gem 'webmock'
+  gem 'action-cable-testing'
 end
 
 group :development do
