@@ -1,0 +1,21 @@
+{
+  "entries": {
+    "tap": {
+      "homebrew/cask": {
+        "revision": "0353c148b1fd67f7b00a62a9c76f64d44b119221"
+      }
+    }
+  },
+  "system": {
+    "macos": {
+      "catalina": {
+        "HOMEBREW_VERSION": "2.2.13",
+        "HOMEBREW_PREFIX": "/usr/local",
+        "Homebrew/homebrew-core": "b3bc27146e280ff25d7ed272fdead285a12e3da4",
+        "CLT": "1103.0.32.29",
+        "Xcode": "11.4.1",
+        "macOS": "10.15.4"
+      }
+    }
+  }
+}
