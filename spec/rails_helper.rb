@@ -4,6 +4,7 @@
 require 'spec_helper'
 require 'simplecov'
 require 'capybara/rspec'
+require 'webmock/rspec'
 
 ENV['RAILS_ENV'] ||= 'test'
 require File.expand_path('../config/environment', __dir__)

@@ -5,6 +5,10 @@ Metrics/LineLength:
   Exclude:
     - bin/bundle
 
+Metrics/BlockLength:
+  Exclude:
+    - spec/services/currency/fetch_rate_spec.rb
+
 Style/Documentation:
   Enabled: false
 
