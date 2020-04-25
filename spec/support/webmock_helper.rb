@@ -1,4 +1,6 @@
 module WebmockHelper
+  WebMock.disable_net_connect!(allow_localhost: true)
+
   def stub_fetch_rate(rate:)
     respone_body = {
       'base' => 'USD',

@@ -27,9 +27,9 @@ module Currency
       response = response.parsed_response
 
       rate = response.dig('rates', 'RUB')
-      time = response.dig('date')
+      date = response.dig('date')
 
-      OpenStruct.new(rate: rate, time: time, success: true)
+      OpenStruct.new(rate: rate, date: date, success: true)
     end
 
     def build_error_response(message)
