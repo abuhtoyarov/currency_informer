@@ -1,0 +1,4 @@
+:concurrency: 5
+:queues:
+  - informer_default
+  - informer_fetch

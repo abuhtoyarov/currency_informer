@@ -1,0 +1,9 @@
+#!/usr/bin/env ruby
+
+require 'rubygems'
+require 'bundler/setup'
+
+APP_PATH = File.expand_path('../config/application', __dir__)
+require_relative '../config/environment'
+
+FetcherRateJob.perform_now
