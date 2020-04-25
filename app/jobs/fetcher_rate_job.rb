@@ -1,15 +1,15 @@
 class FetcherRateJob < ApplicationJob
+  RUN_EVERY = 1.minute
+
   queue_as :fetch
 
   def perform
-    loop do
-      result = Currency::FetchRate.call
+    result = Currency::FetchRate.call
 
-      Currency::RatePublisher.call(rate: result.rate)
+    Currency::RatePublisher.call(rate: result.rate)
 
-      logger.debug "current rate=#{result.rate}"
+    logger.debug "current rate=#{result.rate}"
 
-      sleep 60
-    end
+    self.class.set(wait: RUN_EVERY).perform_later
   end
 end
