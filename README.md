@@ -1,24 +1,42 @@
-# README
+##### Prerequisites
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+The setups steps expect following tools installed on the system.
 
-Things you may want to cover:
+- Github
+- Redis server
+- Postgresql
+- Ruby 2.6.3
+- Rails 6.0.2
+- Chromedriver (for test)
 
-* Ruby version
+##### 1. Check out the repository
 
-* System dependencies
+```bash
+git clone git@github.com:abuhtoyarov/currency_informer.git
+```
 
-* Configuration
+##### 2. Setup
 
-* Database creation
+Dependency installation application preparation
 
-* Database initialization
+```bash
+./bin/setup
+```
 
-* How to run the test suite
+##### 4. Start server and dependencies
 
-* Services (job queues, cache servers, search engines, etc.)
+- http://localhost:3000  (exchange rate information page)
+- http://localhost:3000/admin (page for setting forced rate)
 
-* Deployment instructions
+```bash
+bundle exec foreman start
+```
 
-* ...
+##### 5. Rspec
+
+Running tests
+
+```bash
+bundle exec rspec
+```
+
