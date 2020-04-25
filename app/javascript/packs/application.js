@@ -4,8 +4,7 @@
 // that code so it'll be compiled.
 import 'antd/dist/antd.css'
 
-require("@rails/ujs").start()
-require("channels")
+require("@rails/ujs").start();
 
 
 // Uncomment to copy all static images under ../images to the output folder and reference
