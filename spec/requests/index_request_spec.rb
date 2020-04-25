@@ -7,7 +7,7 @@ RSpec.describe 'Indices', type: :request do
     it 'returns http success' do
       stub_fetch_rate(rate: 74.4436111111)
 
-      get '/index/index'
+      get '/'
       expect(response).to have_http_status(:success)
     end
   end

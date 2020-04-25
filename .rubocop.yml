@@ -6,6 +6,7 @@ Metrics/LineLength:
     - bin/bundle
 
 Metrics/BlockLength:
+  Max: 40
   Exclude:
     - spec/services/currency/fetch_rate_spec.rb
 

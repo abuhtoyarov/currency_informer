@@ -7,13 +7,14 @@ RSpec.feature 'Rate is displayed on the main page', '
   As an guest
   I want to be able to watch the rate change
 ' do
-  background do
-    stub_fetch_rate(rate: 74.4436111111)
-  end
 
   scenario 'rate displayed', js: true do
     visit root_path
-
+    
+    sleep 1
+    
+    Currency::RatePublisher.call(rate: 74.4436111111)
+    
     expect(page).to have_content '74.443611111'
   end
 end

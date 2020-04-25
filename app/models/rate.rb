@@ -1,4 +1,5 @@
 class Rate < ApplicationRecord
+  validates :price, presence: true
   validate :force_date_time_cannot_be_in_the_past
 
   def force_date_time_cannot_be_in_the_past

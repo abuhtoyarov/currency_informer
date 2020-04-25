@@ -48,6 +48,11 @@ group :development, :test do
   gem 'action-cable-testing'
 end
 
+group :test do
+  gem 'shoulda-matchers'
+  gem 'timecop'
+end
+
 group :development do
   gem 'webmock'
   gem 'foreman'
