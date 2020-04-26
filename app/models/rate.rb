@@ -7,7 +7,7 @@ class Rate < ApplicationRecord
   end
 
   def current_price
-    if Time.current > force_date_time
+    if force_date_time.blank? || Time.current > force_date_time
       price
     else
       force_price
