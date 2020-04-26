@@ -4,7 +4,7 @@ require 'rails_helper'
 require 'capybara/rspec'
 
 RSpec.configure do |config|
-  Capybara.javascript_driver = :selenium_chrome
+  Capybara.javascript_driver = :selenium_chrome_headless
 
   Capybara.register_driver :selenium do |app|
     Capybara::Selenium::Driver.new(app, browser: :chrome)
