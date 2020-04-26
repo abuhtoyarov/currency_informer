@@ -48,7 +48,7 @@ export default function(props) {
 
     const data = {
       rate: {
-        price: rate,
+        force_price: rate,
         force_date_time: date.format(),
       }
     }

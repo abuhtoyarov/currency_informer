@@ -11,10 +11,10 @@ RSpec.describe Currency::RatePublisher do
     end
 
     context 'when the rate limit is set' do
-      let(:rate) { Rate.create(price: 10, force_date_time: 5.minute.since) }
+      let(:rate) { Rate.create(force_price: 10, force_date_time: 5.minute.since) }
 
       it 'force rate broadcast' do
-        expect { subject.call(rate: 20) }.to have_broadcasted_to('update_rate').with(rate: rate.price)
+        expect { subject.call(rate: 20) }.to have_broadcasted_to('update_rate').with(rate: rate.force_price.to_f)
       end
 
       context 'when time limit expires' do

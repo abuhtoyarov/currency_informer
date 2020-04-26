@@ -18,9 +18,11 @@ module Currency
 
       return if current_rate.blank? || current_rate.force_date_time.blank?
 
-      current_rate.update_columns(price: new_rate) if Time.current > current_rate.force_date_time
-
-      @new_rate = current_rate.price.to_f
+      if Time.current > current_rate.force_date_time
+        current_rate.update_columns(price: new_rate)
+      else
+        @new_rate = current_rate.force_price.to_f
+      end
     end
 
     def broadcast_to

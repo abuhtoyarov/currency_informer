@@ -23,7 +23,7 @@ module Admin
     private
 
     def rate_params
-      params.require(:rate).permit(:price, :force_date_time)
+      params.require(:rate).permit(:force_price, :force_date_time)
     end
   end
 end
